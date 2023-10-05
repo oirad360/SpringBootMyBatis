@@ -18,7 +18,7 @@ import com.example.springbootmybatis.model.Customer;
 
 
 @RestController
-@RequestMapping("/rest")
+@RequestMapping("/customer")
 public class CustomerController {
 
 	@Autowired
