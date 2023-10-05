@@ -33,13 +33,12 @@ public class CustomerController {
 		return allCustomers;
 	}
 	
-	@GetMapping("/getUsers")
-	   public String getProductList() {
-	      HttpHeaders headers = new HttpHeaders();
-	      headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-	      HttpEntity<String> entity = new HttpEntity<String>(headers);
-	      
-	      return restTemplate.exchange(
-	         "https://reqres.in/api/users", HttpMethod.GET, entity, String.class).getBody();
-	   }
+	@GetMapping(value="/getUsers", produces = MediaType.APPLICATION_JSON_VALUE)
+	public String getProductList() {
+	    HttpHeaders headers = new HttpHeaders();
+	    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+	    HttpEntity<String> entity = new HttpEntity<String>(headers);
+	    return restTemplate.exchange(
+	       "https://reqres.in/api/users", HttpMethod.GET, entity, String.class).getBody();
+	}
 }
