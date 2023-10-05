@@ -34,7 +34,7 @@ public class CustomerController {
 	}
 	
 	@GetMapping(value="/getUsers", produces = MediaType.APPLICATION_JSON_VALUE)
-	public String getProductList() {
+	public String getUsers() {
 	    HttpHeaders headers = new HttpHeaders();
 	    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 	    HttpEntity<String> entity = new HttpEntity<String>(headers);
