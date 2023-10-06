@@ -1,15 +1,15 @@
 package com.example.springbootmybatis.model;
 
-public class User {
+public class Utente {
 	
 	private String name;
 	private String job;
 	
-	public User() {
+	public Utente() {
 		
 	}
 	
-	public User(String name, String job) {
+	public Utente(String name, String job) {
 		this.name = name;
 		this.job = job;
 	}
